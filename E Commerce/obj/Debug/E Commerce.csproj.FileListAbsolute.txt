@@ -52,8 +52,8 @@ C:\Users\USER\source\repos\E Commerce\E Commerce\bin\roslyn\VBCSCompiler.exe
 C:\Users\USER\source\repos\E Commerce\E Commerce\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\USER\source\repos\E Commerce\E Commerce\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\USER\source\repos\E Commerce\E Commerce\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\USER\source\repos\E Commerce\E Commerce\obj\Debug\E Commerce.csprojAssemblyReference.cache
 C:\Users\USER\source\repos\E Commerce\E Commerce\obj\Debug\E Commerce.csproj.CoreCompileInputs.cache
 C:\Users\USER\source\repos\E Commerce\E Commerce\obj\Debug\E Commerce.csproj.CopyComplete
 C:\Users\USER\source\repos\E Commerce\E Commerce\obj\Debug\E Commerce.dll
 C:\Users\USER\source\repos\E Commerce\E Commerce\obj\Debug\E Commerce.pdb
+C:\Users\USER\source\repos\E Commerce\E Commerce\obj\Debug\E Commerce.csprojAssemblyReference.cache

@@ -9,8 +9,9 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta http-equiv="X-UA-Compatible" content="IE-edge"/>
+    <link href="css/Custom.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
@@ -52,7 +53,7 @@
                                     <li><a href="#">Denims</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Registration</a></li>
+                            <li><a href="SignUp.aspx">Registration</a></li>
                         </ul>
                     </div>
                 </div>
@@ -126,19 +127,51 @@
         </div>
 
         <!---Middle Section Start--->
-
-        <div class="container">
+        <hr />
+        <div class="container center">
             <div class="row">
                 <div class="col-lg-4">
-                    <img class="img-circle" src="" alt="thumb" width="140" height="140" />
+                    <img class="img-circle" src="Images/mobile1.png" alt="thumb" width="140" height="140" />
                     <h2>Mobiles</h2>
-                    <p> Lorem Ipsam Lorem Ipsam Lorem Ipsam</p>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et eros sed urna porttitor euismod non ut justo. Quisque sed eros sem. Duis elit ante, viverra id libero sit amet, vulputate interdum velit. Etiam sollicitudin libero non diam mattis, eu viverra nisi aliquet. Praesent maximus lacus sed rhoncus dictum. Suspendisse congue hendrerit mattis. </p>
+                    <p> <a class="btn btn-default" href="#" role="button">View More &raquo;</a> </p>
+                </div>
+
+                <div class="col-lg-4">
+                    <img class="img-circle" src="Images/cloths1.jpg" alt="thumb" width="140" height="140" />
+                    <h2>Clothwear</h2>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum nisi non velit varius ultricies. Integer gravida eros blandit sem auctor rutrum. Aliquam non scelerisque ipsum. Curabitur massa orci, pretium id luctus vitae, tempor sit amet mauris. Nam tincidunt nisi mauris, non mollis lectus pellentesque nec. Duis eget augue lectus.</p>
+                    <p> <a class="btn btn-default" href="#" role="button">View More &raquo;</a> </p>
+                </div>
+
+                <div class="col-lg-4">
+                    <img class="img-circle" src="Images/shoes1.png" alt="thumb" width="140" height="140" />
+                    <h2>Shoes</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum nisi non velit varius ultricies. Integer gravida eros blandit sem auctor rutrum. Aliquam non scelerisque ipsum. Curabitur massa orci, pretium id luctus vitae, tempor sit amet mauris. Nam tincidunt nisi mauris, non mollis lectus pellentesque nec.</p>
                     <p> <a class="btn btn-default" href="#" role="button">View More &raquo;</a> </p>
                 </div>
             </div>
         </div>
 
-        <!---Middle Section End--->
+        <!---Middle Section Ends--->
+
+        <!---Footer Section Starts--->
+
+        <hr />
+        <footer>
+            <div class="container">
+                <p class="pull-right"><a href="#">Back to Top</a></p>
+                <p>
+                    &copy; 2020 TH.in &middot; 
+                    <a href="Default.aspx">Home</a>&middot
+                    <a href="#">About</a>&middot;
+                    <a href="#">Contact</a>&middot;
+                    <a href="#">Products</a>&middot;
+                </p>
+            </div>
+        </footer>
+
+        <!---Footer Section Ends--->
     </form>
 </body>
 </html>
