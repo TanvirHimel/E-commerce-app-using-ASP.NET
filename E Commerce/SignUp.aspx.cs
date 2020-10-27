@@ -24,12 +24,21 @@ namespace E_Commerce
                 using(SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["MyShoppingDB"].ConnectionString))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("Insert into tblUsers (Username, Password, Email, Name) Values('" + txtUname.Text + "','" + txtPass.Text + "','" + txtEmail.Text + "','" + txtName.Text + "')", con);
+                    SqlCommand cmd = new SqlCommand("Insert into tblUsers (Username, Password, Email, Name, Usertype) Values('" + txtUname.Text + "','" + txtPass.Text + "','" + txtEmail.Text + "','" + txtName.Text + "','User')", con);
                     cmd.ExecuteNonQuery();
-                    Response.Write("<script> alert('Registration Successfully done'); </script>");
+                    Response.Write("<script> alert('Reg Successfully done'); </script>");
                     clr();
                     con.Close();
+                    lblMsg.Text = "Registration Successfull";
+                    lblMsg.ForeColor = System.Drawing.Color.Green;
                 }
+                Response.Redirect("~/SignIn.aspx");
+            }
+            else
+            {
+                Response.Write("<script> alert('Registration Failed'); </script>");
+                lblMsg.Text = "All fields are mandatory";
+                lblMsg.ForeColor = System.Drawing.Color.Red;
             }
         }
 
@@ -38,28 +47,33 @@ namespace E_Commerce
             if(txtUname.Text =="")
             {
                 Response.Write("<script> alert ('Username is invalid')</script>");
+                txtUname.Focus();
                 return false;
             }
             else if (txtPass.Text == "")
             {
                 Response.Write("<script> alert ('Password is invalid')</script>");
+                txtPass.Focus();
                 return false;
             }
 
             else if (txtPass.Text != txtCPass.Text)
             {
                 Response.Write("<script> alert ('Confirm Password is invalid')</script>");
+                txtCPass.Focus();
                 return false;
             }
             else if (txtEmail.Text == "")
             {
                 Response.Write("<script> alert ('Email is invalid')</script>");
+                txtEmail.Focus();
                 return false;
             }
 
             else if (txtName.Text == "")
             {
                 Response.Write("<script> alert ('Name is invalid')</script>");
+                txtName.Focus();
                 return false;
             }
 
@@ -72,6 +86,7 @@ namespace E_Commerce
             txtPass.Text = string.Empty;
             txtUname.Text = string.Empty;
             txtEmail.Text = string.Empty;
+            txtCPass.Text = string.Empty;
         }
     }
 }

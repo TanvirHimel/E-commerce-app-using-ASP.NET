@@ -1,10 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SignUp.aspx.cs" Inherits="E_Commerce.SignUp" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SignIn.aspx.cs" Inherits="E_Commerce.SignIn" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Sign Up</title>
+    <title>Sign In</title>
+
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta http-equiv="X-UA-Compatible" content="IE-edge"/>
@@ -17,6 +18,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <div>
             <div class="navbar navbar-default navbar-fixed-top" role="navigation">
                 <div class="container">
                     <div class="navbar-header">
@@ -52,58 +54,80 @@
                                     <li><a href="#">Denims</a></li>
                                 </ul>
                             </li>
-                            <li class="active"><a href="SignUp.aspx">Sign Up</a></li>
-                            <li><a href="SignIn.aspx">Sign In</a></li>
+                            <li><a href="SignUp.aspx">Sign Up</a></li>
+                            <li class="active"><a href="SignIn.aspx">Sign In</a></li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+         </div>
+       </div>
+
+        <br />
+        <br />
+        <br />
+
+        <!---Middle Section Starts--->
+
+        <div class="container">
+            <div class="form-horizontal">
+                <h2>Login Form</h2>
+                <hr />
+                <div class="form-group">
+                    <asp:Label ID="Label1" CssClass="col-md-2 control-label" runat="server" Text="UserName"></asp:Label>
+                    <div class="col-md-3">
+                        <asp:TextBox ID="txtUsername" CssClass="form-control" runat="server"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorUserName" runat="server" ErrorMessage="Please Enter Username" ControlToValidate="txtUsername" CssClass="text-danger" ForeColor="Red"></asp:RequiredFieldValidator>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <asp:Label ID="Label2" CssClass="col-md-2 control-label" runat="server" Text="Password"></asp:Label>
+                    <div class="col-md-3">
+                        <asp:TextBox ID="txtPass" CssClass="form-control" runat="server" TextMode="Password"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorPass" runat="server" ErrorMessage="Please enter a valid password" ControlToValidate="txtPass" CssClass="text-danger" ForeColor="Red"></asp:RequiredFieldValidator>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-6">
+                        <asp:CheckBox ID="CheckBox1" runat="server" />
+                        <asp:Label ID="Label3" CssClass="control-label" runat="server" Text="Remember Me"></asp:Label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-6">
+                        <asp:Button ID="btnLogin" CssClass="btn btn-success" runat="server" Text="Log In &raquo;" OnClick="btnLogin_Click" />
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/SignUp.aspx">Sign Up</asp:HyperLink>
+                    </div>
+                </div>
+
+                <!---Forgot password Section--->
+                <div class="form-group">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-6">
+                        <asp:HyperLink ID="HyForgotPass" runat="server" NavigateUrl="~/ForgetPassword.aspx">Forget Password</asp:HyperLink>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-6">
+                        <asp:Label ID="lblError" CssClass="text-danger" runat="server" ></asp:Label>
                     </div>
                 </div>
             </div>
         </div>
 
-        <br />
-        <br />
-        <br />
-
-        <!---Sign In form Start--->
-        <div class="center-page">
-
-            <label class="col-xs-11">UserName:</label>
-            <div class="col-xs-11">
-            <asp:TextBox ID="txtUname" runat="server" Class="form-control" placeholder="Enter your user name">  </asp:TextBox>
-            </div>
-
-            <label class="col-xs-11">Password:</label>
-            <div class="col-xs-11">
-            <asp:TextBox ID="txtPass" runat="server" TextMode="Password" Class="form-control" placeholder="Enter your password">  </asp:TextBox>
-            </div>
-
-            <label class="col-xs-11">Confirm Password:</label>
-            <div class="col-xs-11">
-            <asp:TextBox ID="txtCPass" runat="server" TextMode="Password" Class="form-control" placeholder="Confirm your password">  </asp:TextBox>
-            </div>
-
-            <label class="col-xs-11">Email:</label>
-            <div class="col-xs-11">
-            <asp:TextBox ID="txtEmail" runat="server" Class="form-control" placeholder="Enter your email">  </asp:TextBox>
-            </div>
-
-            <label class="col-xs-11">Full Name:</label>
-            <div class="col-xs-11">
-            <asp:TextBox ID="txtName" runat="server" Class="form-control" placeholder="Enter your name">  </asp:TextBox>
-            </div>
-
-            <label class="col-xs-11"></label>
-            <div class="col-xs-11">
-                <asp:Button ID="txtsignup" Class="btn btn-success" runat="server" Text="Sign Up" OnClick="txtsignup_Click" />
-                <asp:Label ID="lblMsg" runat="server"></asp:Label>
-            </div>
-        </div>
-        <!---Sign In form Ends--->
+        <!---Middle Section ends--->
 
         <!---Footer Section Starts--->
 
         <hr />
-        <footer class="footer-pos">
+        <footer>
             <div class="container">
                 <p class="pull-right"><a href="#">Back to Top</a></p>
                 <p>

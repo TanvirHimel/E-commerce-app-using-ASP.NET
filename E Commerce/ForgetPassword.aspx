@@ -1,10 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SignUp.aspx.cs" Inherits="E_Commerce.SignUp" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ForgetPassword.aspx.cs" Inherits="E_Commerce.ForgetPassword" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Sign Up</title>
+    <title>Forget Password</title>
+
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta http-equiv="X-UA-Compatible" content="IE-edge"/>
@@ -13,6 +14,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -52,58 +54,44 @@
                                     <li><a href="#">Denims</a></li>
                                 </ul>
                             </li>
-                            <li class="active"><a href="SignUp.aspx">Sign Up</a></li>
                             <li><a href="SignIn.aspx">Sign In</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
+
+            <div class="container">
+                <div class="form-horizontal">
+                    <h2>Recover Password</h2>
+                    <hr />
+                    <h3>Please Enter Your Email Address, we will send you the recovery link for your password!</h3>
+
+                    <div class="form-group">
+                        <asp:Label ID="lblEmail" CssClass="col-md-2 control-label" runat="server" Text="Your Email Address"></asp:Label>
+                        <div class="col-md-3">
+                            <asp:TextBox ID="txtEmailID" CssClass="form-control" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidatorEmail" runat="server" CssClass="text-danger" ErrorMessage="Enter Your Email" ControlToValidate="txtEmailID" ForeColor="Red"></asp:RequiredFieldValidator>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-2"> </div>
+
+                        <div class="col-md-6"> 
+                            <asp:Button ID="btnResetPass" CssClass="btn btn-default" runat="server" Text="Send" OnClick="btnResetPass_Click" />
+                            <asp:Label ID="lblResetPassMsg" CssClass="text-success" runat="server"></asp:Label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
+    </form>
 
-        <br />
-        <br />
-        <br />
-
-        <!---Sign In form Start--->
-        <div class="center-page">
-
-            <label class="col-xs-11">UserName:</label>
-            <div class="col-xs-11">
-            <asp:TextBox ID="txtUname" runat="server" Class="form-control" placeholder="Enter your user name">  </asp:TextBox>
-            </div>
-
-            <label class="col-xs-11">Password:</label>
-            <div class="col-xs-11">
-            <asp:TextBox ID="txtPass" runat="server" TextMode="Password" Class="form-control" placeholder="Enter your password">  </asp:TextBox>
-            </div>
-
-            <label class="col-xs-11">Confirm Password:</label>
-            <div class="col-xs-11">
-            <asp:TextBox ID="txtCPass" runat="server" TextMode="Password" Class="form-control" placeholder="Confirm your password">  </asp:TextBox>
-            </div>
-
-            <label class="col-xs-11">Email:</label>
-            <div class="col-xs-11">
-            <asp:TextBox ID="txtEmail" runat="server" Class="form-control" placeholder="Enter your email">  </asp:TextBox>
-            </div>
-
-            <label class="col-xs-11">Full Name:</label>
-            <div class="col-xs-11">
-            <asp:TextBox ID="txtName" runat="server" Class="form-control" placeholder="Enter your name">  </asp:TextBox>
-            </div>
-
-            <label class="col-xs-11"></label>
-            <div class="col-xs-11">
-                <asp:Button ID="txtsignup" Class="btn btn-success" runat="server" Text="Sign Up" OnClick="txtsignup_Click" />
-                <asp:Label ID="lblMsg" runat="server"></asp:Label>
-            </div>
-        </div>
-        <!---Sign In form Ends--->
-
-        <!---Footer Section Starts--->
+     <!---Footer Section Starts--->
 
         <hr />
-        <footer class="footer-pos">
+        <footer>
             <div class="container">
                 <p class="pull-right"><a href="#">Back to Top</a></p>
                 <p>
@@ -117,6 +105,6 @@
         </footer>
 
         <!---Footer Section Ends--->
-    </form>
+
 </body>
 </html>
