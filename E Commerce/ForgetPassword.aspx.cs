@@ -8,6 +8,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Net.Mail;
+using System.Net;
 
 namespace E_Commerce
 {
@@ -39,8 +40,25 @@ namespace E_Commerce
                     //send Reset link via Email
                     string ToEmailAddress = dt.Rows[0][3].ToString();
                     string Username = dt.Rows[0][1].ToString();
-                    string EmailBody = "Hi ," + Username +", <br/> <br/> Click the link below to reset your password <br/>";
+                    string EmailBody = "Hi ," + Username + ", <br/> <br/> Click the link below to reset your password <br/> https://localhost:44340/RecoverPassword.aspx? id = "+ myGuid;
+
                     MailMessage PassRecMail = new MailMessage("your own email", ToEmailAddress);
+
+                    PassRecMail.Body = EmailBody;
+                    PassRecMail.IsBodyHtml = true;
+                    PassRecMail.Subject = "Reset Password";
+
+                    using (SmtpClient client = new SmtpClient())
+                    {
+                        client.EnableSsl = true;
+                        client.UseDefaultCredentials = false;
+                        client.Credentials = new NetworkCredential("your email", "your password");
+                        client.Host = "smtp.gmail.com";
+                        client.Port = 587;
+                        client.DeliveryMethod = SmtpDeliveryMethod.Network;
+
+                        client.Send(PassRecMail);
+                    }
 
 
                     lblResetPassMsg.Text = "Reset Link sent! Check your Email for reset password";

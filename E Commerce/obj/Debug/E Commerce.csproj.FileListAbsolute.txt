@@ -56,3 +56,4 @@ C:\Users\USER\source\repos\E Commerce\E Commerce\obj\Debug\E Commerce.csproj.Cor
 C:\Users\USER\source\repos\E Commerce\E Commerce\obj\Debug\E Commerce.csproj.CopyComplete
 C:\Users\USER\source\repos\E Commerce\E Commerce\obj\Debug\E Commerce.dll
 C:\Users\USER\source\repos\E Commerce\E Commerce\obj\Debug\E Commerce.pdb
+C:\Users\USER\source\repos\E Commerce\E Commerce\obj\Debug\E Commerce.csprojAssemblyReference.cache
